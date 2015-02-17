@@ -14,6 +14,7 @@ bool isPrime(double);
 bool errorProgram(double,bool);
 void programResult(bool,bool,unsigned long);
 void errorChar(char &);
+void exit();
 
 int main()
 {	unsigned long num;
@@ -48,7 +49,8 @@ int main()
 		cout << "\n\n\tThank You For Using This Program!" << endl;
 		cout << "\n\tPublic Domain\n\n";
 
-	return 0;
+    exit();
+    return 0;
 }
 
 unsigned long addNum()
@@ -140,4 +142,11 @@ void errorChar(char &decision)
 		cout << "\n\tPlease Input A Usable Character Value: ";
 		cin >> decision;
 	}
+}
+
+void exit()
+{   
+    char temp = 'E';
+    cout << "\tEnter 'E' To Exit... ";
+    cin >> temp;
 }
